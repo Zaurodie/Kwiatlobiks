@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozliczenie ~ Kwiatlobiks - Sklep internetowy z kwiatami </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="kupowanie.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logoMaybe.svg"/>
+
+    <script src="produkty.js"></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <aside class="reklama">
+                <a href='https://sklep-ppoz.pl/Gasnice' target="_blank">
+                    <img src="reklama-gasnica.webp">
+                </a>
+            </aside>
+
+
+            <div class="hd_main_ele">
+                <a href="index.html">
+                    <span> 
+                        <h1 style="margin: 0;">Kwiatlobiks</h1> 
+                        <img class="logo" src="logoMaybe.svg"/>
+                    </span>
+                </a>
+            </div>
+
+
+            <aside class="reklama">
+                <a href='https://demotywatory.pl/4707253/Myslelismy-ze-wiewiorki-podjada-karme-dla-ptakow-wiec' target="_blank">
+                    <img src="reklamaKarmaDlaPsa.png">
+                </a>
+             </aside>
+        </header>
+
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="deal/deal.html">Nie sprzedawaj mnie</a></li>
+                    <li><a href="about.html">O nas</a></li>
+                    <li><a href="fajne_strony.html">Fajne strony</a></li>
+                </ul>
+            </nav>
+            <article>
+
+                <h2>Twój koszyk</h2>
+                <div id="koszyk">
+                    <div id="koszyk_prod1">
+                        <img src="zdj_prod/kwiat1.jpg">
+                        <p>Dyplis Lutenes</p>
+                        <button onclick="wywalZKoszyka(1)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod2">
+                        <img src="zdj_prod/kwiat2.jpg">
+                        <p>Charmaedorea elegans</p>
+                        <button onclick="wywalZKoszyka(2)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod3">
+                        <img src="zdj_prod/kwiat3.jpg">
+                        <p>Strelitzia</p>
+                        <button onclick="wywalZKoszyka(3)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod4">
+                        <img src="zdj_prod/kwiat4.jpg">
+                        <p>Cocos Nucifera</p>
+                        <button onclick="wywalZKoszyka(4)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod5">
+                        <img src="zdj_prod/kwiat5.jpg">
+                        <p>Schefflera abrboricola</p>
+                        <button onclick="wywalZKoszyka(5)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod6">
+                        <img src="zdj_prod/kwiat6.jpg">
+                        <p>Spathiphyllum</p>
+                        <button onclick="wywalZKoszyka(6)">Odrzuć</button>
+                    </div>
+                    <div id="koszyk_prod7">
+                        <img src="zdj_prod/kwiat7.jpg">
+                        <p>Clusia</p>
+                        <button onclick="wywalZKoszyka(7)">Odrzuć</button>
+                    </div>
+                </div>
+
+                <p>Łączny koszt: <span id="suma"></span>zł</p>
+
+                <section>
+                    <h3>Uzupełnij dane w celu finalizacji</h3>
+                    <form>
+                        <label for="fName">Imie, nazwisko</label> <br/>
+                        <input id="fName" placeholder="Twoje Imie" type="text">
+                        <input id="lName" placeholder="Twoje Nazwisko" type="text"> <br/>
+
+                        <label for="kraj">Kraj</label><br/>
+                        <input id="kraj" type="text"> <br/>
+
+                        <label for="mail">Kod pocztowy</label> <br/>
+                        <input id="kd_poczta" type="text" placeholder="kod pocztowy"> <br/>
+
+                        <label for="adres">Adres</label>    <br/>
+                        <input type="text" id="adres" placeholder="Twój adres"> <br/>
+
+                        <label for="adres">Telefon (opcjonalnie)</label>    <br/>
+                        <input type="number" id="adres" placeholder="Twój Numer Telefonu"> <br/>
+
+                        <label for="mail">Wprowadź adres swojej poczty elektronicznej</label> <br/>
+                        <input id="email" type="email"> <br/>
+
+                        <h2>Dane karty kredytowej</h2>
+                        <label for="nr_karty">Numer karty</label>
+                        <input type="text" id="nr_karty" placeholder="Numer karty">
+                        <br/>
+                        <label for="trm_waz_karty">Termin ważności</label>
+                        <input type="text" id="trm_waz_karty" placeholder="DZIEŃ/MIESIĄC/ROK">
+                        <br/>
+                        <label for="kod_bezp">Kod bezpieczeństwa</label>
+                        <input type="text" id="kod_bezp" placeholder="Kod bezpieczeństwa">
+
+                        <br/>
+                        <input type="submit" value="Prześlij">
+
+                    </form>
+                </section>
+
+                <h2>Kup może jeszcze</h2>
+                <div id="more_you_buy">
+                    <div id="kupno1">
+                        <img src="zdj_prod/kwiat1.jpg">
+                        <p>Dyplis Lutenes</p>
+                        <button onclick="dodajDoKoszyka(1)">Dodaj</button>
+                    </div>
+                    <div id="kupno2">
+                        <img src="zdj_prod/kwiat2.jpg">
+                        <p>Charmaedorea elegans</p>
+                        <button onclick="dodajDoKoszyka(2)">Dodaj</button>
+                    </div>
+                    <div id="kupno3">
+                        <img src="zdj_prod/kwiat3.jpg">
+                        <p>Strelitzia</p>
+                        <button onclick="dodajDoKoszyka(3)">Dodaj</button>
+                    </div>
+                    <div id="kupno4">
+                        <img src="zdj_prod/kwiat4.jpg">
+                        <p>Cocos Nucifera</p>
+                        <button onclick="dodajDoKoszyka(4)">Dodaj</button>
+                    </div>
+                    <div id="kupno5">
+                        <img src="zdj_prod/kwiat5.jpg">
+                        <p>Schefflera abrboricola</p>
+                        <button onclick="dodajDoKoszyka(5)">Dodaj</button>
+                    </div>
+                    <div id="kupno6">
+                        <img src="zdj_prod/kwiat6.jpg">
+                        <p>Spathiphyllum</p>
+                        <button onclick="dodajDoKoszyka(6)">Dodaj</button>
+                    </div>
+                    <div id="kupno7">
+                        <img src="zdj_prod/kwiat7.jpg">
+                        <p>Clusia</p>
+                        <button onclick="dodajDoKoszyka(7)">Dodaj</button>
+                    </div>
+                </div>
+
+
+            </article>
+        </main>
+
+        <iframe src="footer.htm" ></iframe>
+    </div>
+
+    <script>
+        let suma = 0;
+        stworz_prod();
+
+        function wywalZKoszyka(nr)
+        {
+            let el_koszyka = `koszyk_prod${nr}`;
+            let el_dodatki = `kupno${nr}`; 
+
+            document.getElementById(el_koszyka).style.display = "none";
+            document.getElementById(el_dodatki).style.display = "inline-block";
+
+            suma = parseFloat((suma - produkty[nr - 1].price_int).toFixed(2));
+            //suma -= (Math.ceil( produkty[nr - 1].price_int * 100)) / 100;
+            document.getElementById("suma").innerHTML = suma;
+        }
+        function dodajDoKoszyka(nr)
+        {
+            let el_koszyka = `koszyk_prod${nr}`;
+            let el_dodatki = `kupno${nr}`; 
+
+            document.getElementById(el_dodatki).style.display = "none";
+            document.getElementById(el_koszyka).style.display = "inline-block";
+
+            suma = parseFloat((suma + produkty[nr - 1].price_int).toFixed(2));
+
+            //suma += (Math.ceil( produkty[nr - 1].price_int * 100)) / 100;
+            document.getElementById("suma").innerHTML = suma;
+        }
+
+        const currentUrl = window.location.href;
+        console.log(currentUrl[currentUrl.length - 1]);
+
+        let element = `kupno${currentUrl[currentUrl.length - 1]}`;
+        let koszyk_element = `koszyk_prod${currentUrl[currentUrl.length - 1]}`;
+
+        suma += produkty[currentUrl[currentUrl.length - 1] - 1].price_int;
+        suma = (Math.ceil( suma * 100) )/ 100;
+        document.getElementById("suma").innerHTML = suma;
+
+        document.getElementById(koszyk_element).style.display = "inline-block";
+        document.getElementById(element).style.display = "none";
+    </script>
+</body>
+</html>

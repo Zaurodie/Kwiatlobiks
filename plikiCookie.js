@@ -1,9 +1,7 @@
 function jumpscare()
 {
 document.getElementById("scare").style.display = "block";
-document.getElementById("content").style.top = "-5000000vh";
-//setTimeout("lag()",50);
-
+document.getElementById("content").style.top = "-500000000000px";
 }
 /*
 function lag()
@@ -19,6 +17,5 @@ function ok()
     document.getElementById("scare").style.display = "none";
     document.getElementById("content").style.top = "0";
 }
-
 
 window.onload = setTimeout("jumpscare()",2000);

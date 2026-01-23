@@ -1,0 +1,34 @@
+input
+{
+    border: 2px solid gainsboro;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+div#more_you_buy, #koszyk
+{
+    display: flex;
+    flex-wrap: wrap;
+    div 
+    {
+        background-color: #9e8fc0;
+        padding: 5px;
+        position: relative;
+        width: 150px;
+        min-height: 150px;
+        max-height: 250px;
+        overflow: hidden;
+        text-align: center;
+        img{
+            width: 100%;
+        }
+        p 
+        {
+            margin: 0;
+        }
+    }
+}
+#koszyk div 
+{
+    display: none;
+}

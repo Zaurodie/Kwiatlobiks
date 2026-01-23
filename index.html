@@ -6,13 +6,14 @@
     <title>Kwiatlobiks - Sklep internetowy z kwiatami </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="products_list.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bevan:ital@0;1&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="logoMaybe.svg"/>
 
-    <script src="plikiCookie.js">
-
-    </script>
+    <script src="plikiCookie.js"></script>
+    <script src="produkty.js"></script>
+    
 
 </head>
 <body>
@@ -64,124 +65,9 @@
             </nav>
             <article>
             
-                <div class="flex-container-produkty">
+                <div class="flex-container-produkty" id="miejsce_produkt">
                     
-                    <div class="produkt">
-                        <div class="left">
-                            <a href="stronaProduktu.htm#1" target="_self">
-                                <img src="zdj_prod/kwiat1.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#1" target="_self">
-                                <h3>Dyplis Lutenes</h3>
-                                <p>Kwiat do twojego ogrodu, idealny do kupienia na odwiedziny rodziny, by potem wywalić</p>
-                                <button class="cena">Kup za 79,99zł</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="produkt">
-                        <div class="left">
-                            <a href="stronaProduktu.htm#6" target="_self">
-                                <img src="zdj_prod/kwiat6.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#6" target="_self">
-                                <h3>Spathiphyllum</h3>
-                                <p>Kwiat do twojego ogrodu, doniczka nie załączona,  by potem wywalić</p>
-                                <button class="cena">Kup za 29,99<sup>2</sup> zł</button>
-                            </a>
-                        </div>
-
-                    </div>
-
-
-                    <div class="produkt">
-
-                        <div class="left">
-                            <a href="stronaProduktu.htm#3" target="_self">
-                                <img src="zdj_prod/kwiat3.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#3" target="_self">
-                                <h3>Strelitzia</h3>
-                                <p>Kwiat do twojego ogrodu, idealny do kupienia na odwiedziny rodziny, by potem wywalić</p>
-                                <button class="cena">Kup za 12,99<sup>2</sup> zł</button>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="produkt">
-
-                        <div class="left">
-                            <a href="stronaProduktu1.htm#7" target="_self">
-                                <img src="zdj_prod/kwiat7.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#7" target="_self">
-                                <h3>Clusia</h3>
-                                <p>Kwiat do twojego ogrodu, idealny do kupienia na odwiedziny rodziny, by potem wywalić</p>
-                                <button class="cena">Kup za 199,99zł</button>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="produkt">
-
-                        <div class="left">
-                            <a href="stronaProduktu.htm#2" target="_self">
-                                <img src="zdj_prod/kwiat2.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#2" target="_self">
-                                <h3>Charmaedorea elegans</h3>
-                                <p>Kwiat do twojego ogrodu, idealny do kupienia na odwiedziny rodziny, by potem wywalić</p>
-                                <button class="cena">Kup za 1,50<sup>30</sup> zł</button>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="produkt">
-
-                        <div class="left">
-                            <a href="stronaProduktu.htm#4" target="_self">
-                                <img src="zdj_prod/kwiat4.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#4" target="_self">
-                                <h3>Cocos Nucifera</h3>
-                                <p>Kwiat do twojego ogrodu, idealny do kupienia na odwiedziny rodziny, by potem wywalić, lub rzucić tym kamieniem ze zdjęcia</p>
-                                <button class="cena">Kup za 1,50<sup>30</sup> zł</button>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="produkt">
-
-                        <div class="left">
-                            <a href="stronaProduktu.htm#5" target="_self">
-                                <img src="zdj_prod/kwiat5.jpg" alt="Wysokiej jakości produkt"/>
-                            </a>
-                        </div>
-                        <div class="right">
-                            <a href="stronaProduktu.htm#5" target="_self">
-                                <h3>Schefflera abrboricola</h3>
-                                <p>Kwiat do twojego ogrodu, nie znane są żadne powiązania z kokosami, ale nadal możesz go wywalić do kosza</p>
-                                <button class="cena">Kup za log<sub>2</sub>2147483648 zł</button>
-                            </a>
-                        </div>
-
-                    </div>
+                    
 
 
             </article>
@@ -189,6 +75,38 @@
 
         <iframe src="footer.htm" ></iframe>
     </div>
+    <script>
+        stworz_prod();
 
+        let ile_produkty = 7, comleted = [];
+
+        for(let i = 0; i < ile_produkty; ++i)
+            comleted[i] = false;
+
+        let num;
+
+        let done = false;
+        
+        for(let i = 0; i < ile_produkty; i++)
+        {
+            let isCompl = false;
+
+            while(!isCompl)
+            { 
+                num = Math.floor(Math.random() * (ile_produkty - 1 + 1)) + 1;
+                console.log(num);
+                if(!comleted[num - 1]) 
+                {
+                    comleted[num - 1] = true;
+                    isCompl = true;
+                }
+            }               
+                console.log(num);
+                comleted[num - 1] = true;
+                document.getElementById("miejsce_produkt").innerHTML += generate_shop_prod(num);
+  
+
+        }
+    </script>
 </body>
 </html>

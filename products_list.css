@@ -1,0 +1,49 @@
+.flex-container-produkty
+{
+    gap: 20px 15px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.produkt 
+{
+    position: relative;
+    --inheritable_color: #0f061a;
+    box-sizing: border-box;
+    display: inline-block;
+
+    width: clamp(350px, calc(33% - 30px), 600px);
+    background: #ab9ec9;
+    padding: 2.5px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12.5px;
+    border-radius: .5vw;
+
+    
+    .left 
+    {
+        padding: 5px;
+        grid-column: 1 / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right 
+    {
+        a{
+            text-decoration: none;
+            color: var(--inheritable_color)
+        }
+    }
+
+    img
+    {
+        border-radius: .5vw;
+        width: 100%;
+    }
+
+}
