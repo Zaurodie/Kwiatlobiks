@@ -1,0 +1,143 @@
+@property --bg_color1
+{
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+}
+
+body 
+{
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+	overflow: hidden;
+	
+	margin: 0;
+    min-height: 100vh;
+    
+    background: #422;
+	color: #fff;
+	
+	
+    
+}
+div.yachie
+{
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+}
+
+div.bg1
+{
+    background: url(zdjecia/yache2bg.png);
+    animation: goDown 10s linear infinite;
+    opacity: 0.8;
+}
+div.bg2
+{
+    background: url(zdjecia/yache1bg.png);
+    top: -300px;
+    animation: goUp 10s linear infinite;
+    opacity: 0.5;
+}
+div.bg3
+{
+    width: 100vw;
+    height: 100vw;
+    background: url(zdjecia/bgEffect4.png) top left / 100% 100%;
+    top: calc(-45vw + 45vh);
+    animation: rotate 90s linear infinite;
+    opacity: 1;
+    scale: 1.1;
+}
+div.bg4
+{
+    height: 100vh;
+    background: url(zdjecia/xd.png) top left / 105% 105% repeat;
+    opacity: 0.65;
+    /*animation: goUp 10s linear infinite;*/
+}
+
+h1
+{
+    text-align: center;
+    margin: 0;
+    scale: 0.1;
+    animation: grow 20s linear 1 5s forwards, lights 2s linear infinite 20s;
+}
+
+
+@keyframes grow 
+{
+    to 
+    {
+        scale: 1;
+    }
+}
+@keyframes lights
+{
+    50% 
+    {
+        text-shadow: 0 0 12px #fff;
+    }
+}
+
+@keyframes goDown {
+    to 
+    {
+        top:-265px;
+    }
+}
+@keyframes goUp {
+    to 
+    {
+        top:0;
+    }
+}
+@keyframes rotate {
+    to 
+    {
+        rotate: -360deg;
+    }
+}
+
+div#pole_dane
+{
+    min-width: 250px;
+    padding: 15px;
+
+    text-align: center;
+	background-color: #4225;
+    *:not(:first-child)
+    {
+        margin-top: 10px;
+    }
+}
+
+#error, #sukces
+{
+	position: absolute;
+	left: 0;
+	top:0;
+	
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	
+	width: 100vw;
+	height: 100vh;
+	
+	background: #ddd;
+	color: #422;
+	
+}
+
+textarea
+{
+    min-width: 90%;
+    min-height: 50px;
+    resize: both;
+}

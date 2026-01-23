@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEAL ZWIĄZANY Z TWOIMI DANYMI </title>
+    <link rel="stylesheet" href="deal.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="bgEffect4.png"/>
+
+    <script src='deal.js'></script>
+
+</head>
+<body>
+    <div class="yachie bg1">
+
+    </div>
+    <div class="yachie bg2">
+
+    </div>
+    <div class="yachie bg3">
+
+    </div>
+    <div class="yachie bg4">
+
+    </div>
+    <h1>CHCESZ NIE DOPROWADZIĆ DO SPRZEDANIA TWOICH DANYCH OSOBOWYCH? NAPISZ DO NAS!</h1>
+	<div id='pole_dane'>
+		<form>
+			<label for='pesel'>Podaj swój pesel</label> <br/>
+			<input type='number' id='pesel'>            <br/>
+            <label for="why">Napisz dlaczego</label>    <br/>
+            <textarea type="text" id="why" size="1" placeholder="Argumentacja z 1 przykładem z lektury obowiązkowej, innego utworu literackiego i 2 kontekstów"> </textarea>
+
+		</form>
+		<button onclick='weryfikacja()'> Prześlij </button>
+
+        
+	</div>
+	
+	<div id='error' style='visibility:hidden;'>
+		<h2>Wiesz jak wygląda pesel?</h2>
+		<button onclick='tak()'>tak.</button>
+	</div>
+	
+	<div id='sukces' style='visibility:hidden;'>
+		<h2>Dziękujemy za podzielenie się informacją. Twoje zgłoszenie zostanie rozpatrzone w ciągu &infin; minut</h2>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+@property --text_color 
+{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #000000;
+}
+@property --inheritable_color 
+{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #000000;
+}
+
+@property --bg_color1
+{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ffffff;
+}
+
+body 
+{
+    margin: 0;
+}
+
+header, nav a 
+{
+    font-family: "Bevan";
+}
+
+header
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+
+    min-height: 150px;
+
+    --bg_color1: #b299eb;
+    --text_color: rgb(6, 11, 36);
+    
+    
+    background-color: var(--bg_color1);
+    color: var(--text_color);
+
+    div.hd_main_ele
+    {
+        position: relative;
+        padding-right: 5.2em;
+        
+        a
+        {
+            --text_color: rgb(6, 11, 36);
+            color: var(--text_color);
+
+            text-decoration: none;
+        }
+        
+        img.logo
+        {
+            position: absolute;
+            height: 5em;
+            top:-25%;
+            right: -5.2em;
+        }
+        span
+            {
+                position: relative;
+                top:25%;
+            }
+        span::after
+        {
+            position: absolute;
+            bottom: -10px;
+            left: 15px;
+            content: "Bez pasji. Od zawsze.";
+            
+            min-width: 200px;
+            font-size: .75em;
+        }
+    }
+
+
+    .reklama {
+        box-sizing: border-box;
+
+        width: 33%;
+        height: 150px;
+        
+        cursor: pointer;
+        border: 2px solid #0000;
+        border-radius: 10px;
+        /*animation: border 2s linear infinite;*/
+        
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+}
+header span
+{
+    z-index: 1;
+    display: inline-flex;
+    justify-content:center ;
+    align-items: center;
+
+    h1
+    {
+        --text_color: rgb(37, 62, 131);
+        color: var(--text_color);
+    }
+    
+}
+@media screen and (max-width: 662px) {
+    header 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    aside.reklama {width: 100%;}
+    div.hd_main_ele {min-height: 100px; padding-top: 20px;}
+}
