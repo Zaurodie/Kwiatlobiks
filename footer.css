@@ -4,7 +4,21 @@ body
     /*overflow: hidden;*/
 }
 
+footer, footer a
+{
+    color: #f8e8ff;
+}
+
 footer
 {
     min-height: 170px;
+    a 
+    {
+        text-decoration: none;
+    }
+
+    a:hover
+    {
+        text-decoration: solid underline;
+    }
 }

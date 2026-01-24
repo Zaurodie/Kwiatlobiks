@@ -1,8 +1,22 @@
-input
+body.shake
+{
+    position: relative;
+    top:0;
+    left:0;
+    animation: shake .1s ease-in-out 51 -0.1s;
+}
+
+input, #sender button
 {
     border: 2px solid gainsboro;
-    padding: 4px;
+    border-radius: 1.5px;
+    padding: 8px 4px;
     margin-bottom: 10px;
+}
+
+input:focus
+{
+    outline: 2px solid #6586e0;
 }
 
 div#more_you_buy, #koszyk
@@ -27,8 +41,75 @@ div#more_you_buy, #koszyk
             margin: 0;
         }
     }
+
+    button
+    {
+        padding: 8% 30%;
+        background-color: #cdcad3;
+        border: 2px solid #925bbe;
+    }
+    button:focus
+    {
+        translate: 0 -5px;
+        background-color: #a4a2a8;
+        border: 2px solid #6f3f96;
+        box-shadow: 0 5px 0 0 #6f3f96;
+    }
+    
 }
 #koszyk div 
 {
     display: none;
+}
+
+form 
+{
+    transition: 1s;
+}
+
+#sender 
+{
+    height: 30px;
+    position: relative;
+    button, input 
+    {
+        position: absolute;
+        left: 2px;
+        top:2px;
+    }
+}
+.visibility_anim
+{
+    opacity: 0;
+    animation: show 1s ease-in 1 forwards;
+    display: none;
+}
+#hm
+{
+    position: relative;
+    color: red;
+    z-index: 3000;
+    animation: noticeMe 1s linear 1 forwards;
+}
+.I_forgot
+{   
+    text-align: center;
+    position: relative;
+    
+}
+
+@keyframes noticeMe
+{
+    50% {scale: 4;}
+    100% {display: none; visibility: hidden; left: -2137vw; position: absolute;}
+}
+
+@keyframes show
+{
+    to {opacity: 1;}
+}
+
+@keyframes shake {
+    50% {left:5px;}
+    75% {top:5px;}
 }

@@ -87,11 +87,12 @@ div#scare
 {
     position:absolute;
     padding: 22px;
+    padding-top: 30vh;
     background-color: #fff;
-    top: 0;
+    top: -30vh;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -30vh;
 
     font-size: 100%;
     
@@ -134,6 +135,19 @@ button.cena:active
 {
     background-color: hsl(0, 96%, 67%);
     border: 3px solid hsl(0, 69%, 51%);
+}
+
+.fajne_strony 
+{
+    a
+    {
+        color: #334ee6;
+        text-decoration: none;
+    }
+    a:hover 
+    {
+        text-decoration: solid underline;
+    }
 }
 
 @media screen and (max-width: 662px) 

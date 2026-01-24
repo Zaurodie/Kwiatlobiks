@@ -12,8 +12,9 @@
     <link rel="icon" type="image/x-icon" href="logoMaybe.svg"/>
 
     <script src="produkty.js"></script>
+    <script src="deal/deal.js"></script>
 </head>
-<body>
+<body id="shaker">
     <div id="content">
         <header>
             <aside class="reklama">
@@ -90,7 +91,7 @@
                     </div>
                 </div>
 
-                <p>Łączny koszt: <span id="suma"></span>zł</p>
+                <p>Łączny koszt: <span id="suma">0</span>zł</p>
 
                 <section>
                     <h3>Uzupełnij dane w celu finalizacji</h3>
@@ -113,6 +114,11 @@
 
                         <label for="mail">Wprowadź adres swojej poczty elektronicznej</label> <br/>
                         <input id="email" type="email"> <br/>
+                        
+                        <div id="troll" style="display: none;">
+                            <label for="pesel">Pesel</label>    <br/>
+                            <input type="text" id="pesel" placeholder="Pesel">
+                        </div>
 
                         <h2>Dane karty kredytowej</h2>
                         <label for="nr_karty">Numer karty</label>
@@ -125,9 +131,16 @@
                         <input type="text" id="kod_bezp" placeholder="Kod bezpieczeństwa">
 
                         <br/>
-                        <input type="submit" value="Prześlij">
-
+                        <div id="hm" style="display: none;">
+                            <h2>Zapomniałem o czymś!</h2>
+                        </div>
                     </form>
+
+                    <div id="sender">
+                        <button id="sender_button" onclick="fix()">Prześlij</button>
+                        <input id="sender_submit" style="display: none;" type="submit" value="Prześlij">
+                    </div>
+
                 </section>
 
                 <h2>Kup może jeszcze</h2>
@@ -218,6 +231,7 @@
 
         document.getElementById(koszyk_element).style.display = "inline-block";
         document.getElementById(element).style.display = "none";
+
     </script>
 </body>
 </html>
