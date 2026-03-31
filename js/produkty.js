@@ -99,7 +99,7 @@ function generate_prod(nr_prod)
                     <div class="lewo">
                         <div>
                             <img src="zdj_prod/kwiat${nr_prod}.jpg">
-                            <a href="php/kupowanie.php#${nr_prod}"><button class="cena">Kup za ${produkty[nr_prod - 1].price_str} zł</button></a>
+                            <a href="html/kupowanie.html#${nr_prod}"><button class="cena">Kup za ${produkty[nr_prod - 1].price_str} zł</button></a>
                         </div>
                         <h2>
                             ${produkty[nr_prod-1].name}
