@@ -6,7 +6,7 @@ body.shake
     animation: shake .1s ease-in-out 51 -0.1s;
 }
 
-input, #sender button
+input, #sender button, #sender_button
 {
     border: 2px solid gainsboro;
     border-radius: 1.5px;

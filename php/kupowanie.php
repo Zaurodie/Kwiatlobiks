@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rozliczenie ~ Kwiatlobiks - Sklep internetowy z kwiatami </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="kupowanie.css">
+
+    <base href="../index.html">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/kupowanie.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bevan:ital@0;1&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="logoMaybe.svg"/>
 
-    <script src="produkty.js"></script>
-    <script src="deal/deal.js"></script>
+    <script src="js/produkty.js"></script>
+    <script src="js/deal.js"></script>
 </head>
 <body id="shaker">
     <div id="content">
         <header>
             <aside class="reklama">
                 <a href='https://sklep-ppoz.pl/Gasnice' target="_blank">
-                    <img src="reklama-gasnica.webp">
+                    <img src="imgs/reklama-gasnica.webp">
                 </a>
             </aside>
 
@@ -28,7 +31,7 @@
                 <a href="index.html">
                     <span> 
                         <h1 style="margin: 0;">Kwiatlobiks</h1> 
-                        <img class="logo" src="logoMaybe.svg"/>
+                        <img class="logo" src="imgs/logoMaybe.svg"/>
                     </span>
                 </a>
             </div>
@@ -36,7 +39,7 @@
 
             <aside class="reklama">
                 <a href='https://demotywatory.pl/4707253/Myslelismy-ze-wiewiorki-podjada-karme-dla-ptakow-wiec' target="_blank">
-                    <img src="reklamaKarmaDlaPsa.png">
+                    <img src="imgs/reklamaKarmaDlaPsa.png">
                 </a>
              </aside>
         </header>
@@ -46,8 +49,8 @@
                 <ul>
                     <li><a href="index.html">Strona główna</a></li>
                     <li><a href="deal/deal.html">Nie sprzedawaj mnie</a></li>
-                    <li><a href="about.html">O nas</a></li>
-                    <li><a href="fajne_strony.html">Fajne strony</a></li>
+                    <li><a href="html/about.html">O nas</a></li>
+                    <li><a href="html/fajne_strony.html">Fajne strony</a></li>
                 </ul>
             </nav>
             <article>
@@ -91,55 +94,59 @@
                     </div>
                 </div>
 
-                <p>Łączny koszt: <span id="suma">0</span>zł</p>
-
                 <section>
+                <form id="form" action="php/wydruk.php" method="post"> 
+                    <p>Łączny koszt: <span id="suma"></span> zł</p>
+                    <input type="hidden" style="all:unset; text-align: right; display: none;" name='sumaRel' value="" id="sumaRel">
                     <h3>Uzupełnij dane w celu finalizacji</h3>
-                    <form>
+                    
+                        
+
                         <label for="fName">Imie, nazwisko</label> <br/>
-                        <input id="fName" placeholder="Twoje Imie" type="text">
-                        <input id="lName" placeholder="Twoje Nazwisko" type="text"> <br/>
+                        <input name="fName" id="fName" placeholder="Twoje Imie" type="text">
+                        <input name="lName" id="lName" placeholder="Twoje Nazwisko" type="text"> <br/>
 
                         <label for="kraj">Kraj</label><br/>
-                        <input id="kraj" type="text"> <br/>
+                        <input name="kraj" id="kraj" type="text"> <br/>
 
-                        <label for="mail">Kod pocztowy</label> <br/>
-                        <input id="kd_poczta" type="text" placeholder="kod pocztowy"> <br/>
+                        <label for="kd_poczta">Kod pocztowy</label> <br/>
+                        <input name="kd_poczta" id="kd_poczta" type="text" placeholder="kod pocztowy"> <br/>
 
                         <label for="adres">Adres</label>    <br/>
-                        <input type="text" id="adres" placeholder="Twój adres"> <br/>
+                        <input name="adres" type="text" id="adres" placeholder="Twój adres"> <br/>
 
-                        <label for="adres">Telefon (opcjonalnie)</label>    <br/>
-                        <input type="number" id="adres" placeholder="Twój Numer Telefonu"> <br/>
+                        <label for="telefon">Telefon (opcjonalnie)</label>    <br/>
+                        <input name="telefon" type="text" id="telefon" placeholder="Twój Numer Telefonu"> <br/>
 
-                        <label for="mail">Wprowadź adres swojej poczty elektronicznej</label> <br/>
-                        <input id="email" type="email"> <br/>
+                        <label for="email">Wprowadź adres swojej poczty elektronicznej</label> <br/>
+                        <input name="email" id="email" type="email"> <br/>
                         
                         <div id="troll" style="display: none;">
                             <label for="pesel">Pesel</label>    <br/>
-                            <input type="text" id="pesel" placeholder="Pesel">
+                            <input name="pesel" type="text" id="pesel" placeholder="Pesel">
                         </div>
 
                         <h2>Dane karty kredytowej</h2>
                         <label for="nr_karty">Numer karty</label>
-                        <input type="text" id="nr_karty" placeholder="Numer karty">
+                        <input name="nr_karty" type="text" id="nr_karty" placeholder="Numer karty">
                         <br/>
                         <label for="trm_waz_karty">Termin ważności</label>
-                        <input type="text" id="trm_waz_karty" placeholder="DZIEŃ/MIESIĄC/ROK">
+                        <input name="trm_waz_karty" type="text" id="trm_waz_karty" placeholder="DZIEŃ/MIESIĄC/ROK">
                         <br/>
                         <label for="kod_bezp">Kod bezpieczeństwa</label>
-                        <input type="text" id="kod_bezp" placeholder="Kod bezpieczeństwa">
+                        <input name="kod_bezp" type="text" id="kod_bezp" placeholder="Kod bezpieczeństwa">
 
                         <br/>
                         <div id="hm" style="display: none;">
                             <h2>Zapomniałem o czymś!</h2>
                         </div>
+                        <div id="sender">
+                        
+                    </div>
                     </form>
 
-                    <div id="sender">
-                        <button id="sender_button" onclick="fix()">Prześlij</button>
-                        <input id="sender_submit" style="display: none;" type="submit" value="Prześlij">
-                    </div>
+                    <button id="sender_button" onclick="fix()">Prześlij</button>
+                    <input id="sender_submit" style="display: none;" type="submit" onclick="submit()" value="Prześlij">
 
                 </section>
 
@@ -186,12 +193,18 @@
             </article>
         </main>
 
-        <iframe src="footer.htm" ></iframe>
+        <iframe src="html/footer.htm" ></iframe>
     </div>
 
     <script>
         let suma = 0;
         stworz_prod();
+
+        function submit()
+        {
+            document.getElementById("sumaRel").value = suma;
+            document.getElementById("form").submit();
+        }
 
         function wywalZKoszyka(nr)
         {

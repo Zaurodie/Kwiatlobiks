@@ -75,15 +75,15 @@ function generate_shop_prod(nr_prod)
     return `<div class="produkt">
 
                         <div class="left">
-                            <a href="stronaProduktu.htm#${nr_prod}" target="_self">
+                            <a href="html/stronaProduktu.htm#${nr_prod}" target="_self">
                                 <img src="zdj_prod/kwiat${nr_prod}.jpg" alt="Wysokiej jakości produkt"/>
                             </a>
                         </div>
                         <div class="right">
-                            <a href="stronaProduktu.htm#${nr_prod}" target="_self">
+                            <a href="html/stronaProduktu.htm#${nr_prod}" target="_self">
                                 <h3>${produkty[nr_prod - 1].name}</h3>
                                 <p>${produkty[nr_prod - 1].short_desc}</p>
-                                <button class="cena">Kup za ${produkty[nr_prod - 1].price_str}</button>
+                                <button class="cena">Kup za ${produkty[nr_prod - 1].price_str} zł</button>
                             </a>
                         </div>
 
@@ -99,7 +99,7 @@ function generate_prod(nr_prod)
                     <div class="lewo">
                         <div>
                             <img src="zdj_prod/kwiat${nr_prod}.jpg">
-                            <a href="kupowanie.html#${nr_prod}"><button class="cena">Kup za ${produkty[nr_prod - 1].price_str}zł</button></a>
+                            <a href="php/kupowanie.php#${nr_prod}"><button class="cena">Kup za ${produkty[nr_prod - 1].price_str} zł</button></a>
                         </div>
                         <h2>
                             ${produkty[nr_prod-1].name}
