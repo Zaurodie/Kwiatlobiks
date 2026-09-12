@@ -2,7 +2,7 @@ let ceny_prod_str = [ `79,99`, `1,50<sup>30</sup>`, `12,99<sup>2</sup>`, `72,24`
     `log<sub>2</sub>2147483648`, `29,99`, `199,99`
 ]
 let nazwy_prod = ["Dyplis Lutenes", "Charmaedorea elegans", "Strelitzia", "Cocos Nucifera",
-    "Schefflera abrboricola", "Spathiphyllum", "Clusia"
+"Schefflera abrboricola", "Spathiphyllum", "Clusia"
 ]
 
 let cena_int = [79.99, 191751.06, 168.74, 72.24, 31, 29.99, 199.99];
